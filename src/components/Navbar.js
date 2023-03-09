@@ -40,3 +40,4 @@ Navbar.defaultProps = {
   title: "Title",
   AboutText: "About"
 }
+
