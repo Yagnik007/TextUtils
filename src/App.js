@@ -1,15 +1,15 @@
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
-// import TextForm from './components/TextForm';
+import TextForm from './components/TextForm';
 function App() {
   return (
     <>
       <Navbar title = "Text-utils"/>
-      {/* <div className="container my-3">
+      <div className="container my-3">
         <TextForm/>
-      </div> */}
-      <About/>
+      </div>
+      {/* <About/> */}
     </>
   );
 }
