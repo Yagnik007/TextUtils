@@ -7,8 +7,7 @@ import TextForm from "./components/TextForm";
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
@@ -30,7 +29,7 @@ function App() {
       setMode("dark");
       document.body.style.backgroundColor = "#740c16";
       showAlert("Dark mode has been enabled", "success");
-      document.title = "Textutils - DarkMode";
+      // document.title = "Textutils - DarkMode";
       // setInterval(()=>{
       //   document.title = "Textutils is Amazing";
       // }, 2000);
@@ -42,7 +41,7 @@ function App() {
       setMode("light");
       document.body.style.backgroundColor = "white";
       showAlert("Light mode has been enabled", "success");
-      document.title = "Textutils - LightMode";
+      // document.title = "Textutils - LightMode";
     }
   };
 
@@ -52,7 +51,7 @@ function App() {
         <Navbar title="TEXTUTILS" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <Routes>
-            <Route exact path="/about" element={<About/>}/> 
+            <Route exact path="/about" element={<About mode = {mode}/>}/> 
             <Route exact path="/" element = {<TextForm showAlert={showAlert} mode={mode} toggleMode={toggleMode}/>}/> 
         </Routes>
       </Router>

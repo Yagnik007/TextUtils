@@ -1,43 +1,17 @@
-import React,{useState} from "react";
+import React from "react";
+import "./about.css"
 
-export default function About() {
+export default function About(props) {
 
-    const[myStyle, setMyStyle] = useState(
-      {
-        color: 'black',
-        backgroundColor: 'white',
-        border: '1px solid white'
-      }
-    )
-
-    const[btnText, setBtnText] = useState("Enable Dark Mode")
-
-    const toggleDarkMode = () =>
-    {
-      if(myStyle.color === 'black')
-      {
-        setMyStyle(
-          {
-            color: 'white',
-            backgroundColor: 'black'
-          }
-        )
-        setBtnText("Enable Light Mode")
-      }
-      else{
-        setMyStyle(
-          {
-            color: 'black',
-            backgroundColor: 'white'
-          }
-        )
-        setBtnText("Enable Dark Mode")
-      }
-    }
+  let myStyle = 
+  {
+    color: props.mode === 'dark'? 'white' : 'black',
+    backgroundColor : props.mode === 'dark' ? '#4c070e' : 'white'
+  }
 
   return (
-    <div className = "container-xxl my-3" style={myStyle}>
-    <h1>About Us</h1>
+    <div className="container" >
+      <h1 className = "my-3" style={{color: props.mode === 'dark'? 'white':'black'}}>About Us</h1>
       <div className="accordion" id="accordionExample">
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingOne">
@@ -47,28 +21,23 @@ export default function About() {
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
-              aria-expanded="true"
+              // aria-expanded="true"
               aria-controls="collapseOne"
             >
-              Accordion Item #1
+              <h5>Analyze Your text</h5>
             </button>
           </h2>
           <div
-          style={myStyle}
+            style={myStyle}
             id="collapseOne"
             className="accordion-collapse collapse show"
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              Textutils gives you a way to analyze your text quickly and
+              efficiently. Be it word count, character count or Time to read
+              your text.
             </div>
           </div>
         </div>
@@ -83,25 +52,21 @@ export default function About() {
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              Accordion Item #2
+              <h5>Free to use</h5>
             </button>
           </h2>
           <div
-          style={myStyle}
+            style={myStyle}
             id="collapseTwo"
             className="accordion-collapse collapse"
             aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              Textutils is a free character counter tool that provides instant
+              character count and word count statistics for a given text.
+              Textutils reports the number of characters and words. Thus it is
+              suitable for writing text with word/character limits.
             </div>
           </div>
         </div>
@@ -116,31 +81,24 @@ export default function About() {
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              Accordion Item #3
+              <h5>Browser Compatbile</h5>
             </button>
           </h2>
           <div
-          style={myStyle}
+            style={myStyle}
             id="collapseThree"
             className="accordion-collapse collapse"
             aria-labelledby="headingThree"
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              This word counter software works in any web browsers such as
+              chrome, Firefox, Safari, Opera. It suits to count characters in
+              facebook, blog, books, excel documents, pdf documents, essays,
+              etc.
             </div>
           </div>
         </div>
-      </div>
-      <div className="container my-3">
-        <button onClick={toggleDarkMode} type="button" className ="btn btn-success my-2">{btnText}</button>
       </div>
     </div>
   );
