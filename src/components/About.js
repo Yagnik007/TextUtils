@@ -34,9 +34,9 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              Textutils gives you a way to analyze your text quickly and
+             <ul><li>Textutils gives you a way to analyze your text quickly and
               efficiently. Be it word count, character count or Time to read
-              your text.
+              your text.</li></ul> 
             </div>
           </div>
         </div>
@@ -62,10 +62,10 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              Textutils is a free character counter tool that provides instant
+              <ul><li>Textutils is a free character counter tool that provides instant
               character count and word count statistics for a given text.
               Textutils reports the number of characters and words. Thus it is
-              suitable for writing text with word/character limits.
+              suitable for writing text with word/character limits.</li></ul>
             </div>
           </div>
         </div>
@@ -91,10 +91,11 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              This word counter software works in any web browsers such as
+              <ul><li>This word counter software works in any web browsers such as
               chrome, Firefox, Safari, Opera. It suits to count characters in
               facebook, blog, books, excel documents, pdf documents, essays,
-              etc.
+              etc.</li></ul>
+              
             </div>
           </div>
         </div>
