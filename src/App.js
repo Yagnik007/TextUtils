@@ -47,12 +47,12 @@ function App() {
 
   return (
     <>
-    <Router basename = "/TextUtils">
+    <Router basename="/TextUtils">
         <Navbar title="TEXTUTILS" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <Routes>
             <Route exact path="/about" element={<About mode = {mode}/>}/> 
-            <Route exact path="/TextUtils" element = {<TextForm showAlert={showAlert} mode={mode} toggleMode={toggleMode}/>}/> 
+            <Route exact path="/" element = {<TextForm showAlert={showAlert} mode={mode} toggleMode={toggleMode}/>}/> 
         </Routes>
       </Router>
     </>

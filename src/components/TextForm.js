@@ -92,7 +92,7 @@ export default function TextForm(props) {
                 100
             ) / 100}
           </b>{" "}
-          minutes read!!
+          minutes to read!!
         </h5>
         <div>
         <button disabled = {text.split(" ").filter((element) => {
